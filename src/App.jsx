@@ -103,7 +103,7 @@ function App() {
                 </label>
             </div>
             <input type="email" placeholder="Mobile number or email address" required />
-            <input type="password" placeholder="New password" required />
+            <input type="password" placeholder="password" required />
             <button type="submit" class="sign-up">Sign Up</button>
         
         <p>Already have an account? <a href="#">Log in</a></p>
