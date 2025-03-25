@@ -3,13 +3,20 @@ import "./App.css";
 
 function App() {
   return (
-      <div className="container">
-        <h1>facebook</h1>
-        <h2>Create a new account</h2>
-        
-            <input type="text" placeholder="First name" required />
-            <input type="text" placeholder="Surname" required />
-            <label>Date of birth</label>
+    <div class="signup-wrapper">
+    <h1 class="logo-text">facebook</h1>
+    <div class="signup-card">
+        <h2>Sign Up</h2>
+        <p>It’s quick and easy.</p>
+        <hr />
+
+        <div class="name-fields">
+            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="Last name" />
+        </div>
+
+        <label class="form-label">Date of birth</label>
+        <div class="date-fields">
             <select>
                 <option>1</option>
                 <option>2</option>
@@ -41,9 +48,9 @@ function App() {
                 <option>28</option>
                 <option>29</option>
                 <option>30</option>
-
+ 
             </select>
-            <select>
+            <select id="">
                 <option>Jan</option>
                 <option>Feb</option>
                 <option>Mar</option>
@@ -57,9 +64,9 @@ function App() {
                 <option>Nav</option>
                 <option>Dec</option>
                 
-
             </select>
-            <select>
+          
+            <select id="">
                 <option>2001</option>
                 <option>2002</option>
                 <option>2003</option>
@@ -87,28 +94,29 @@ function App() {
                 <option>2025</option>
                 
             </select>
-            <label>Gender</label>
-            <div class="gender">
-                <label> 
-                  <input type="radio" name="gender"/> 
-                  Female 
-                </label>
-                <label>
-                  <input type="radio" name="gender" /> 
-                  Male 
-                </label>
-                <label>
-                  <input type="radio" name="gender" />
-                  Custom
-                </label>
-            </div>
-            <input type="email" placeholder="Mobile number or email address" required />
-            <input type="password" placeholder="password" required />
-            <button type="submit" class="sign-up">Sign Up</button>
-        
-        <p>Already have an account? <a href="#">Log in</a></p>
-    
+
+        </div>
+
+        <label class="form-label">Gender</label>
+        <div class="gender-selection">
+            <label><input type="radio" name="gender" /> Female</label>
+            <label><input type="radio" name="gender" /> Male</label>
+            <label><input type="radio" name="gender" /> Custom</label>
+        </div>
+
+        <input type="email" placeholder="Email or phone number" />
+        <input type="password" placeholder="New password" />
+
+        <p class="terms-text">
+            By clicking Sign Up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+        </p>
+
+        <button class="signup-button">Sign Up</button>
+        <p class="login-text">Already have an account? <a href="#">Log in</a></p>
     </div>
+</div>
+
+
   );
 }
 
