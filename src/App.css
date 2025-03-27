@@ -35,7 +35,7 @@
 }
 
 input, select {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin: 6px 0;
     border: 1px solid #ccc;
@@ -68,6 +68,7 @@ input, select {
     border: 1px solid #ccc;
     border-radius: 6px;
     cursor: pointer;
+    gap: 10px;
 }
 
 /* Terms and Conditions */
