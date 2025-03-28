@@ -7,6 +7,7 @@ const months=["Jan","Feb","mar","Apr","May","June","July","Aus","sep","Oct","Nov
 const years=[];
 const genders=["Male","Female","Others"];
 
+const [users,setuser]= useState([]);
 const [firstname,setfirstname]= useState("");
 const [lastname,setlastname]= useState("");
 const [date,setdate]= useState("");
@@ -64,6 +65,7 @@ const handlepassword=(event)=>{
 
 const signup=()=>{
     const userdata={
+        id:users.length+1,
         firstname,
         lastname,
         date,
@@ -73,9 +75,20 @@ const signup=()=>{
         email,
         password,
     };
+    setuser  ([...users,userdata])
+    setfirstname("");
+    setlastname("");
+    setdate("");
+    setmonth("");
+    setyear("");
+    setgender("");
+    setemail("");
+    setpassword("");
     console.log("userdata:",userdata)
     alert("Signup Successfull");
 }
+
+ 
   return (
     <div class="signup-wrapper">
     <h1 class="logo-text">facebook</h1>
@@ -138,6 +151,40 @@ const signup=()=>{
         <button class="signup-button" onClick={signup}>Sign Up</button>
         <p class="login-text">Already have an account? <a href="#">Log in</a></p>
     </div>
+    <h2>USER LIST</h2>
+    <table border="1" cellPadding="10">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Date</th>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>    
+        </thead>
+        <tbody>
+            {users.map((user) =>(
+                <tr >
+                <td>{user.id}</td>
+                <td>{user.firstname}</td>
+                <td>{user.lastname}</td>
+                <td>{user.date}</td>
+                <td>{user.mont}</td>
+                <td>{user.yearr}</td>
+                <td>{user.gen}</td>
+                <td>{user.email}</td>
+                <td>{user.password}</td>
+               </tr>
+
+            ))}
+            
+        </tbody>
+
+    </table>
 </div>
 
 
