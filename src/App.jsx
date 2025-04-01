@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+import Home from "./home.jsx";
+import Login from "./login";
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 const dates=[];
@@ -90,6 +93,16 @@ const signup=()=>{
 
  
   return (
+<div>
+    <div>
+      <h1>Welcome to My App</h1>
+      <Routes> 
+        <Route path="/" element={<Home />} /> 
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </div>
+
     <div class="signup-wrapper">
     <h1 class="logo-text">facebook</h1>
     <div class="signup-card">
@@ -186,7 +199,7 @@ const signup=()=>{
 
     </table>
 </div>
-
+</div>
 
   );
 }
